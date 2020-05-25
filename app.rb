@@ -21,7 +21,7 @@ class App < Sinatra::Base
   end 
 
   get '/say/:word1/:word2/:word3/:word4/:word5' do
-    @word_arr = params.map { |k, v| v }
+    @word_arr = params.values
     "#{@word_arr.join(' ') + '.'}"
   end 
 
